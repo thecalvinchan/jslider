@@ -7,17 +7,16 @@ function() {
     var numImages = 0;
     $('#slideshow img').each(function(){numImages++;}).hide().first().show();
     $('#thumbnails img').eq(0).css({'border':'5px solid #6699FF','margin':'0px'});
-	$('#slideshowcontainer').prepend('<div id="left" class="picnav"><a href="#" class="arrows">&lt;</a></div>');
-    $('<div id="right" class="picnav"><a href="#" class="arrows">&gt;</a></div>').insertBefore('#thumbnails');
+    $('#slideshowcontainer').append('<div id="picnavleft" class="picnav"><a href="#" class="arrows">&lt;</a></div><div id="picnavright" class="picnav"><a href="#" class="arrows">&gt;</a></div>');
 
     var heightImage = $('#slideshow img').height();
-    var heightNav = $('#arrows').height();
+    var heightNav = $('.arrows').eq(0).height();
     var paddingOffset = Math.floor((heightImage-heightNav)/2);
     var heightAdjusted = heightImage-paddingOffset;
-    $('.picnav').css({'height':heightAdjusted,'padding-top':paddingOffset});
+    $('.picnav').css({'margin-top':paddingOffset});
 
     var curPicIndex = 0
-    $('#right').click(
+    $('#picnavright').click(
         function()
         {
             $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "left"}, 500);
@@ -34,7 +33,7 @@ function() {
         }
     );
 
-    $('#left').click(
+    $('#picnavleft').click(
         function()
         {
             $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "right"}, 500);

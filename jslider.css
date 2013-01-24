@@ -1,7 +1,8 @@
 #slideshowcontainer {
-	width: 940px;
+	width: 500px;
+	height: 350px;
 	margin: 0 auto 0 auto;
-	padding: 10px;
+	position: relative;
 }
 
 #slideshow {
@@ -14,6 +15,7 @@
 	height: 300px;
 	display: none;
 	position: absolute;
+	overflow: hidden;
 }
 
 #images {
@@ -22,22 +24,30 @@
 .picnav {
 	width: 30px;
 	font-size: 30px;
+	position: absolute;
+	background-color: #6699FF;
+	z-index: 9999;
 }
 
 .arrows:link, .arrows:visited {
 	text-decoration: none;
+	color: #ccffff;
 }
 
 .arrows:hover, .arrows:active {
-	border-bottom: 1px dotted #fff;
+	color: #0000aa;
 }
 
-#left {
-	float: left;
+#picnavleft {
+	left: 0;
+	text-align: center;
+	padding: 5px;
 }
 
-#right {
-	float: right;
+#picnavright {
+	right: 0;
+	text-align: center;
+	padding: 5px;
 }
 
 #thumbnails {

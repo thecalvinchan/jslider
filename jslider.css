@@ -1,0 +1,54 @@
+#slideshowcontainer {
+	width: 940px;
+	margin: 0 auto 0 auto;
+	padding: 10px;
+}
+
+#slideshow {
+	width: 500px;
+	margin: 0 auto 0 auto;
+}
+
+#slideshow img {
+	width: 500px;
+	height: 300px;
+	display: none;
+	position: absolute;
+}
+
+#images {
+}
+
+.picnav {
+	width: 30px;
+	font-size: 30px;
+}
+
+.arrows:link, .arrows:visited {
+	text-decoration: none;
+}
+
+.arrows:hover, .arrows:active {
+	border-bottom: 1px dotted #fff;
+}
+
+#left {
+	float: left;
+}
+
+#right {
+	float: right;
+}
+
+#thumbnails {
+	clear: both;
+	padding: 10px 0 10px 0;
+	white-space: nowrap;
+	overflow-x: scroll;
+}
+
+#thumbnails img{
+	display: inline;
+	width: 100px;
+	margin: 5px;
+}

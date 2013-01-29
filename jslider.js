@@ -1,3 +1,8 @@
+/*
+by Calvin Chan
+http://www.thecalvinchan.com
+*/
+
 $(document).ready(
 function() {
 
@@ -19,14 +24,14 @@ function() {
     $('#picnavright').click(
         function()
         {
-            $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "left"}, 500);
+            $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "left"}, 700);
             $('#thumbnails img').eq(curPicIndex).css({'border':'none','margin':'5px'});
             if (curPicIndex < numImages-1)
-                $('#slideshow img').eq(++curPicIndex).show("slide", {direction: "right"}, 500);
+                $('#slideshow img').eq(++curPicIndex).show("slide", {direction: "right"}, 700);
             else
             {
                 curPicIndex=0;
-                $('#slideshow img').eq(curPicIndex).show("slide", {direction: "right"}, 500);
+                $('#slideshow img').eq(curPicIndex).show("slide", {direction: "right"}, 700);
             }
             $('#thumbnails img').eq(curPicIndex).css({'border':'5px solid #6699FF','margin':'0px'});
             $('#thumbnails').scrollLeft(curPicIndex * 114);
@@ -36,14 +41,14 @@ function() {
     $('#picnavleft').click(
         function()
         {
-            $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "right"}, 500);
+            $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "right"}, 700);
             $('#thumbnails img').eq(curPicIndex).css({'border':'none','margin':'5px'});
             if (curPicIndex > 0)
-                $('#slideshow img').eq(--curPicIndex).show("slide", {direction: "left"}, 500);
+                $('#slideshow img').eq(--curPicIndex).show("slide", {direction: "left"}, 700);
             else
             {
                 curPicIndex=numImages-1;
-                $('#slideshow img').eq(curPicIndex).show("slide", {direction: "left"}, 500);
+                $('#slideshow img').eq(curPicIndex).show("slide", {direction: "left"}, 700);
             }
             $('#thumbnails img').eq(curPicIndex).css({'border':'5px solid #6699FF','margin':'0px'});
             $('#thumbnails').scrollLeft(curPicIndex * 114);
@@ -57,18 +62,18 @@ function() {
             {
                 if (curPicIndex<$(this).index())
                 {
-                    $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "left"}, 500);
+                    $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "left"}, 700);
                     $('#thumbnails img').eq(curPicIndex).css({'border':'none','margin':'5px'});
                     curPicIndex = $(this).index();
-                    $('#slideshow img').eq(curPicIndex).show("slide", {direction: "right"}, 500);
+                    $('#slideshow img').eq(curPicIndex).show("slide", {direction: "right"}, 700);
                     $('#thumbnails img').eq(curPicIndex).css({'border':'5px solid #6699FF','margin':'0px'});
                 }
                 else
                 {
-                    $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "right"}, 500);
+                    $('#slideshow img').eq(curPicIndex).hide("slide", {direction: "right"}, 700);
                     $('#thumbnails img').eq(curPicIndex).css({'border':'none','margin':'5px'});
                     curPicIndex = $(this).index();
-                    $('#slideshow img').eq(curPicIndex).show("slide", {direction: "left"}, 500);
+                    $('#slideshow img').eq(curPicIndex).show("slide", {direction: "left"}, 700);
                     $('#thumbnails img').eq(curPicIndex).css({'border':'5px solid #6699FF','margin':'0px'});
                 }
             }

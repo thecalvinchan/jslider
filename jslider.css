@@ -1,3 +1,13 @@
+/*
+by Calvin Chan
+http://www.thecalvinchan.com
+*/
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto 0 auto;
+}
+
 #slideshowcontainer {
 	width: 500px;
 	height: 350px;
@@ -23,6 +33,7 @@
 
 .picnav {
 	width: 30px;
+	height: 25px;
 	font-size: 30px;
 	position: absolute;
 	background-color: #6699FF;
